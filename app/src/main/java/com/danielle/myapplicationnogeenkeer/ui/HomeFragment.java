@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentHomeBinding;
 
@@ -31,33 +32,21 @@ public class HomeFragment extends Fragment {
         button_lenen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                LenenFragment fr = new LenenFragment();
-                fragmentTransaction.replace(android.R.id.content, fr);
-                fragmentTransaction.commit();
+                MainActivity.ReplaceFragment(new LenenFragment());
             }
         });
 
         button_inleveren.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                InleverenFragment fr = new InleverenFragment();
-                fragmentTransaction.replace(android.R.id.content, fr);
-                fragmentTransaction.commit();
+                MainActivity.ReplaceFragment(new InleverenFragment());
             }
         });
 
         button_huidigeleningen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                HuidigeLeningenFragment fr = new HuidigeLeningenFragment();
-                fragmentTransaction.replace(android.R.id.content, fr);
-                fragmentTransaction.commit();
+                MainActivity.ReplaceFragment(new HuidigeLeningenFragment());
             }
         });
         return root;

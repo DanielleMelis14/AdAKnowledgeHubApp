@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentHuidigeLeningenBinding;
 
@@ -27,11 +28,7 @@ public class HuidigeLeningenFragment extends Fragment {
         button_terug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                HomeFragment fr = new HomeFragment();
-                fragmentTransaction.replace(android.R.id.content, fr);
-                fragmentTransaction.commit();
+                MainActivity.PreviousFragment();
             }
         });
         return root;
