@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void ReplaceFragment(Fragment fragment) {
-        Log.i("isabel", fragment.getClass().toString());
         FragmentTransaction fT = fm.beginTransaction();
         fT.replace(R.id.nav_host_fragment_activity_main, fragment);
         fT.addToBackStack(fragment.getTag());
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void PreviousFragment() {
-        Log.i("isabel", "huuuu");
         fm.popBackStackImmediate();
     }
 }

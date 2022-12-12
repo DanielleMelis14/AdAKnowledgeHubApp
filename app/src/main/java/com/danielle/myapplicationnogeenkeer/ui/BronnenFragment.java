@@ -27,12 +27,19 @@ public class BronnenFragment extends Fragment {
         View root = binding.getRoot();
 
         Button button_boeken = root.findViewById(R.id.button_boeken);
+        Button button_online_bronnen = root.findViewById(R.id.button_online_bronnen);
 
         button_boeken.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("isabel", "dqwdwqdwqwdqwq");
                 MainActivity.ReplaceFragment(new BoekenOverzichtFragment());
+            }
+        });
+
+        button_online_bronnen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.ReplaceFragment(new OnlineBronnenFragment());
             }
         });
 

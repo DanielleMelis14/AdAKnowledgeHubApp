@@ -32,7 +32,7 @@ public class OnlineBronnenFragment extends Fragment {
         button_terug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.PreviousFragment();
+                MainActivity.ReplaceFragment(new BronnenFragment());
             }
         });
         return root;
