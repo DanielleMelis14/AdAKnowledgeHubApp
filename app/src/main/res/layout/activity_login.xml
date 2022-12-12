@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_maak_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:width="241dp"
+        android:height="65dp"
+        android:backgroundTint="@color/ada_blue"
+        android:text="@string/login"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        android:viewportWidth="241"
+        android:viewportHeight="65"
+        android:onClick="Inloggen"
+        app:cornerRadius="20px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWachtwoord"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/button_maakaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:width="241dp"
+        android:height="65dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/maak_account"
+        android:textAlignment="viewStart"
+        android:textColor="@color/ada_blue"
+        android:textStyle="bold"
+        android:viewportWidth="241"
+        android:viewportHeight="65"
+        android:onClick="MaakAccount"
+        app:cornerRadius="20px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_maak_account"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/title_account_aanmaken"
+        android:layout_width="255dp"
+        android:layout_height="76dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="92dp"
+        android:fontFamily="@font/ubuntu"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/title_login"
+        android:textAlignment="center"
+        android:textColor="@color/ada_green"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNaam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/email"
+        android:textColor="@color/ada_blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputNaam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_account_aanmaken"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/wachtwoord"
+        android:textColor="@color/ada_blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputWachtwoord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNaam"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/inputWachtwoord"
+        android:layout_width="241dp"
+        android:layout_height="50dp"
+        android:background="@drawable/inputfield"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/inputNaam"
+        android:layout_width="241dp"
+        android:layout_height="50dp"
+        android:background="@drawable/inputfield"
+        android:ems="10"
+        android:fontFamily="@font/ubuntu"
+        android:inputType="textPersonName"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textColor="@color/ada_blue"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNaam"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_ada" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

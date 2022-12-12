@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">My Application Nog een keer</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="page_home">Home</string>
+    <string name="page_bronnen">Bronnen</string>
+    <string name="page_geschiedenis">Geschiedenis</string>
+    <string name="page_instellingen">Instellingen</string>
+
+    <string name="title_account_aanmaken">Account aanmaken</string>
+    <string name="naam">Naam</string>
+    <string name="studentnummer">Studentnummer</string>
+    <string name="herhaal_wachtwoord">Herhaal wachtwoord</string>
+
+    <string name="title_login">Informatie systeem</string>
+    <string name="email">Email adres</string>
+    <string name="wachtwoord">Wachtwoord</string>
+    <string name="login">Login</string>
+    <string name="maak_account">Maak account</string>
+
+    <string name="title_home_">Home</string>
+    <string name="lenen">Lenen</string>
+    <string name="inleveren">Inleveren</string>
+    <string name="huidige_leningen">Huidige leningen</string>
+    <string name="title_activity_bottom_navigation">Bottom_navigation</string>
+    <string name="title_dashboard_">Dashboard</string>
+    <string name="title_notifications_">Notifications</string>
+
+    <string name="title_bronnen">Bronnen</string>
+    <string name="boeken">Boeken</string>
+    <string name="online_bronnen">Online Bronnen</string>
+    <string name="opgeslagen">Opgeslagen</string>
+
+    <string name="title_geschiedenis">Geschiedenis</string>
+
+    <string name="title_instellingen">Instellingen</string>
+    <string name="persoonlijke_gegevens">Persoonlijke gegevens</string>
+    <string name="log_uit">Log uit</string>
+
+    <string name="title_lenen">Lenen</string>
+    <string name="tekst_lenen">Houd uw telefoon tegen de chip in het boek om het boek te lenen</string>
+
+    <string name="title_inleveren">Inleveren</string>
+    <string name="tekst_inleveren">Houd uw telefoon tegen de chip in het boek om het boek in te leveren</string>
+
+    <string name="title_huidige_leningen">Huidige leningen</string>
+    <string name="verlengen">Verlengen</string>
+    <string name="boek_titel">Titel van boek</string>
+    <string name="leen_dagen">Nog ... dagen</string>
+
+    <string name="zoeken">Zoeken</string>
+
+    <string name="title_online_bronnen">Online bronnen</string>
+</resources>
