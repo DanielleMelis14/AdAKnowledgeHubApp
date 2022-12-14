@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.danielle.myapplicationnogeenkeer.Lenen;
 import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentHomeBinding;
@@ -32,7 +33,8 @@ public class HomeFragment extends Fragment {
         button_lenen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.ReplaceFragment(new LenenFragment());
+                //Jeremy
+//                MainActivity.ReplaceFragment(new Lenen());
             }
         });
 
