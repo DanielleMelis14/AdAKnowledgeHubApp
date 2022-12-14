@@ -8,8 +8,6 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;

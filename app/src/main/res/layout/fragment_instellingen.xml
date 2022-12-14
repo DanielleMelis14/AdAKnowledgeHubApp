@@ -53,10 +53,10 @@
         app:layout_constraintTop_toBottomOf="@+id/title_instellingen" />
 
     <Button
-        android:id="@+id/button_online_bronnen"
+        android:id="@+id/button_loguit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
         android:width="241dp"
         android:height="65dp"
         android:backgroundTint="@color/ada_blue"

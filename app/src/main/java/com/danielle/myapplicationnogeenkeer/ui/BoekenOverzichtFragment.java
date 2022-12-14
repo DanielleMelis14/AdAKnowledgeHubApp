@@ -7,16 +7,30 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.danielle.myapplicationnogeenkeer.MaakAccount;
 import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentBoekenOverzichtBinding;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentHomeBinding;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class BoekenOverzichtFragment extends Fragment {
 
@@ -38,6 +52,5 @@ public class BoekenOverzichtFragment extends Fragment {
         });
         return root;
     }
-
 
 }
