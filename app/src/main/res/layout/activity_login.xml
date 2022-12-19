@@ -7,48 +7,49 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_maak_account"
+        android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
         android:width="241dp"
         android:height="65dp"
         android:backgroundTint="@color/ada_blue"
+        android:onClick="MaakAccount"
         android:text="@string/login"
         android:textAlignment="viewStart"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:viewportWidth="241"
         android:viewportHeight="65"
-        android:onClick="Inloggen"
         app:cornerRadius="20px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputWachtwoord"
+        app:layout_constraintTop_toBottomOf="@+id/inputWachtwoordInlog"
         tools:ignore="OnClick" />
 
     <Button
-        android:id="@+id/button_maakaccount"
+        android:id="@+id/button_login_maak_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:width="241dp"
         android:height="65dp"
         android:backgroundTint="@color/white"
+        android:onClick="MaakAccount"
         android:text="@string/maak_account"
         android:textAlignment="viewStart"
         android:textColor="@color/ada_blue"
         android:textStyle="bold"
         android:viewportWidth="241"
         android:viewportHeight="65"
-        android:onClick="MaakAccount"
         app:cornerRadius="20px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_maak_account"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
         tools:ignore="OnClick" />
 
     <TextView
-        android:id="@+id/title_account_aanmaken"
+        android:id="@+id/title_inloggen"
         android:layout_width="255dp"
         android:layout_height="76dp"
         android:layout_alignParentLeft="true"
@@ -74,11 +75,11 @@
         android:text="@string/email"
         android:textColor="@color/ada_blue"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inputNaam"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmailInlog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.252"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_account_aanmaken"
+        app:layout_constraintTop_toBottomOf="@+id/title_inloggen"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -90,15 +91,15 @@
         android:text="@string/wachtwoord"
         android:textColor="@color/ada_blue"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inputWachtwoord"
+        app:layout_constraintBottom_toTopOf="@+id/inputWachtwoordInlog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNaam"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmailInlog"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/inputWachtwoord"
+        android:id="@+id/inputWachtwoordInlog"
         android:layout_width="241dp"
         android:layout_height="50dp"
         android:background="@drawable/inputfield"
@@ -113,7 +114,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/inputNaam"
+        android:id="@+id/inputEmailInlog"
         android:layout_width="241dp"
         android:layout_height="50dp"
         android:background="@drawable/inputfield"
