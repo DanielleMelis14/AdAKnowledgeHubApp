@@ -16,13 +16,14 @@
         android:theme="@style/Theme.MyApplicationNogEenKeer"
         tools:targetApi="31">
         <activity
+            android:name=".Lenen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MaakAccount"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".LoginPage"
             android:exported="true"
