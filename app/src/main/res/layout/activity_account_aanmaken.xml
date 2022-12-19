@@ -10,11 +10,10 @@
         android:id="@+id/button_maak_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:width="241dp"
         android:height="65dp"
         android:backgroundTint="@color/ada_blue"
-        android:onClick="Inloggen"
+        android:onClick="Login"
         android:text="@string/maak_account"
         android:textAlignment="viewStart"
         android:textStyle="bold"
@@ -23,11 +22,11 @@
         app:cornerRadius="20px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputHerhaalWachtwoord"
-        tools:ignore="OnClick" />
+        tools:ignore="OnClick"
+        tools:layout_editor_absoluteY="609dp" />
 
     <TextView
-        android:id="@+id/title_account_aanmaken"
+        android:id="@+id/title_inloggen"
         android:layout_width="255dp"
         android:layout_height="76dp"
         android:layout_alignParentLeft="true"
@@ -54,15 +53,26 @@
         android:text="@string/naam"
         android:textColor="@color/ada_blue"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inputNaam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_account_aanmaken"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/title_inloggen" />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/email"
+        android:textColor="@color/ada_blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="265dp" />
 
     <EditText
-        android:id="@+id/inputNaam"
+        android:id="@+id/input_acc_naam"
         android:layout_width="241dp"
         android:layout_height="50dp"
         android:background="@drawable/inputfield"
@@ -78,22 +88,8 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNaam"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/txt_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/ubuntu"
-        android:text="@string/email"
-        android:textColor="@color/ada_blue"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNaam" />
-
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/input_acc_email"
         android:layout_width="241dp"
         android:layout_height="50dp"
         android:background="@drawable/inputfield"
@@ -105,26 +101,13 @@
         android:textColor="@color/ada_blue"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_email"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/txt_studentnummer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/ubuntu"
-        android:text="@string/studentnummer"
-        android:textColor="@color/ada_blue"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
-
     <EditText
-        android:id="@+id/inputStudentnummer"
+        android:id="@+id/input_acc_studentnr"
         android:layout_width="241dp"
         android:layout_height="50dp"
         android:background="@drawable/inputfield"
@@ -141,10 +124,22 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
+        android:id="@+id/txt_studentnummer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/studentnummer"
+        android:textColor="@color/ada_blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <TextView
         android:id="@+id/txt_wachtwoord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/ubuntu"
         android:text="@string/wachtwoord"
         android:textColor="@color/ada_blue"
@@ -152,51 +147,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputStudentnummer" />
-
-    <EditText
-        android:id="@+id/inputWachtwoord"
-        android:layout_width="241dp"
-        android:layout_height="50dp"
-        android:background="@drawable/inputfield"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:paddingStart="4dp"
-        android:paddingEnd="4dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_wachtwoord"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/txt_herhaal_wachtwoord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/ubuntu"
-        android:text="@string/herhaal_wachtwoord"
-        android:textColor="@color/ada_blue"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputWachtwoord" />
-
-    <EditText
-        android:id="@+id/inputHerhaalWachtwoord"
-        android:layout_width="241dp"
-        android:layout_height="50dp"
-        android:background="@drawable/inputfield"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:paddingStart="4dp"
-        android:paddingEnd="4dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_herhaal_wachtwoord"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:layout_editor_absoluteY="417dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -207,5 +158,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_ada" />
+
+    <EditText
+        android:id="@+id/input_acc_wachtwoord"
+        android:layout_width="241dp"
+        android:layout_height="50dp"
+        android:background="@drawable/inputfield"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_wachtwoord" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
