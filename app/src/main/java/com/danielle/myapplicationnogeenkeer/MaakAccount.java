@@ -27,23 +27,17 @@ public class MaakAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_aanmaken);
-
         Button btnCreateAccount = this.findViewById(R.id.button_createAcc);
         btnCreateAccount.setOnClickListener(e->{
             CreateAccount();
         });
     }
 
-    public void Inloggen(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
     public void CreateAccount() {
-        String inputNaam = ((EditText) this.findViewById(R.id.inputNaam)).getText().toString();
-        String inputEmail = ((EditText) this.findViewById(R.id.inputEmail)).getText().toString();
-        String inputStudentNummer = ((EditText) this.findViewById(R.id.inputStudentnummer)).getText().toString();
-        String inputWachtwoord = ((EditText) this.findViewById(R.id.inputWachtwoord)).getText().toString();
+        String inputNaam = ((EditText) this.findViewById(R.id.input_acc_naam)).getText().toString();
+        String inputEmail = ((EditText) this.findViewById(R.id.input_acc_email)).getText().toString();
+        String inputStudentNummer = ((EditText) this.findViewById(R.id.input_acc_studentnr)).getText().toString();
+        String inputWachtwoord = ((EditText) this.findViewById(R.id.input_acc_wachtwoord)).getText().toString();
 
         String url = "https://projects.adainforma.tk/adaknowledgehub/api/v1/student/register/";
 
@@ -81,5 +75,7 @@ public class MaakAccount extends AppCompatActivity {
         };
 
         queue.add(request);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

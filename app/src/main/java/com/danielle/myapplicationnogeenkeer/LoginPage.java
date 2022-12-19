@@ -28,16 +28,10 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button btn_login = this.findViewById(R.id.button_inloggen);
-
+        Button btn_login = this.findViewById(R.id.button_login);
         btn_login.setOnClickListener(e->{
-            Inloggen();
+            Login();
         });
-    }
-
-    public void Inloggen(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 
     public void MaakAccount(View v){
@@ -45,7 +39,7 @@ public class LoginPage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void Inloggen() {
+    public void Login() {
         String inputEmail = ((EditText) this.findViewById(R.id.inputEmailInlog)).getText().toString();
         String inputWachtwoord = ((EditText) this.findViewById(R.id.inputWachtwoordInlog)).getText().toString();
 
@@ -83,7 +77,6 @@ public class LoginPage extends AppCompatActivity {
         };
 
         queue.add(request);
-
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
