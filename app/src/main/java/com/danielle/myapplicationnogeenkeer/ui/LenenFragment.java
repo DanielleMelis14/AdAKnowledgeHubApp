@@ -32,17 +32,8 @@ public class LenenFragment extends Fragment {
 
         button_terug.setOnClickListener(new View.OnClickListener() {
             @Override
-<<<<<<< HEAD
-                public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                HomeFragment fr = new HomeFragment();
-                fragmentTransaction.replace(android.R.id.content, fr);
-                fragmentTransaction.commit();
-=======
             public void onClick(View view) {
                 MainActivity.PreviousFragment();
->>>>>>> 8c26276a8739aa76ae69b97f8f8ee3e1d3d50978
             }
         });
         return root;
