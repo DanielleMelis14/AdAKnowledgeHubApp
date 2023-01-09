@@ -38,22 +38,35 @@
         android:id="@+id/zoekbalk"
         android:layout_width="297dp"
         android:layout_height="41dp"
-        android:layout_marginTop="15dp"
         android:iconifiedByDefault="false"
         android:queryHint="Zoeken"
+        app:layout_constraintBottom_toTopOf="@+id/Gridview_boeken"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_boeken" />
 
     <Button
         android:id="@+id/btn_back"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <GridView
+        android:id="@+id/Gridview_boeken"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="2"
+        android:padding="6dp"
+        android:verticalSpacing="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zoekbalk" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

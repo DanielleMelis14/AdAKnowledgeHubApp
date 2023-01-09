@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentBoekenOverzichtBinding;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentOnlineBronnenBinding;
@@ -31,11 +32,7 @@ public class OnlineBronnenFragment extends Fragment {
         button_terug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                BronnenFragment fr = new BronnenFragment();
-                fragmentTransaction.replace(android.R.id.content, fr);
-                fragmentTransaction.commit();
+                MainActivity.ReplaceFragment(new BronnenFragment());
             }
         });
         return root;

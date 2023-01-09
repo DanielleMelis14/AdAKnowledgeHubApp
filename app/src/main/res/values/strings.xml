@@ -52,5 +52,7 @@
 
     <string name="zoeken">Zoeken</string>
 
+    <string name="title_persoonlijke_gegevens">Persoonlijke gegevens</string>
+
     <string name="title_online_bronnen">Online bronnen</string>
 </resources>

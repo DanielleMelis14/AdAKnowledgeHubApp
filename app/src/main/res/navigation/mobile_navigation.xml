@@ -28,16 +28,4 @@
         android:name="com.danielle.myapplicationnogeenkeer.ui.InstellingenFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_instellingen" />
-
-    <fragment
-        android:id="@+id/navigation_huidigeleningen"
-        android:name="com.danielle.myapplicationnogeenkeer.ui.HuidigeLeningenFragment"
-        android:label="@string/title_huidige_leningen"
-        tools:layout="@layout/fragment_huidige_leningen" />
-
-    <fragment
-        android:id="@+id/navigation_boekenOverzicht"
-        android:name="com.danielle.myapplicationnogeenkeer.ui.BoekenOverzichtFragment"
-        android:label="@string/boeken"
-        tools:layout="@layout/fragment_boeken_overzicht" />
 </navigation>

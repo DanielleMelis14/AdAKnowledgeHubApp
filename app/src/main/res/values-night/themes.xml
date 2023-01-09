@@ -12,5 +12,7 @@
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/ubuntu</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:color">@color/ada_blue</item>
+        <item name="android:background">@color/white</item>
     </style>
 </resources>
