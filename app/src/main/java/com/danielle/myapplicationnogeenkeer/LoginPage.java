@@ -32,11 +32,12 @@ public class LoginPage extends AppCompatActivity {
         btn_login.setOnClickListener(e->{
             Login();
         });
-    }
 
-    public void MaakAccount(View v){
-        Intent intent = new Intent(this, MaakAccount.class);
-        startActivity(intent);
+        Button btn_maakAcc = this.findViewById(R.id.button_login_maak_account);
+        btn_maakAcc.setOnClickListener(e->{
+            Intent intent = new Intent(this, MaakAccount.class);
+            startActivity(intent);
+        });
     }
 
     public void Login() {
@@ -50,7 +51,6 @@ public class LoginPage extends AppCompatActivity {
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(LoginPage.super.getBaseContext(), "Data added to API", Toast.LENGTH_SHORT).show();
                 Log.i("Response", response);
 
                 try {
@@ -58,12 +58,20 @@ public class LoginPage extends AppCompatActivity {
                     System.out.println(jsonResponse);
                     System.out.println(jsonResponse.get("data"));
 
+                    if (jsonResponse.getBoolean("success") == true){
+                        Intent intent = new Intent(LoginPage.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else {
+                        Toast.makeText(LoginPage.super.getBaseContext(), "Username or password incorrect", Toast.LENGTH_SHORT).show();
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         }, error -> {
-            // method to handle errors.
             Toast.makeText(LoginPage.super.getBaseContext(), "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
             error.printStackTrace();
         }) {
@@ -77,7 +85,5 @@ public class LoginPage extends AppCompatActivity {
         };
 
         queue.add(request);
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 }
