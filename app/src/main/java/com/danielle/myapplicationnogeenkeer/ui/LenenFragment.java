@@ -31,7 +31,7 @@ public class LenenFragment extends Fragment {
 
         button_terug.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+                public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 HomeFragment fr = new HomeFragment();
