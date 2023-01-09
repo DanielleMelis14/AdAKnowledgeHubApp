@@ -118,7 +118,7 @@
         android:background="@drawable/inputfield"
         android:ems="10"
         android:fontFamily="@font/ubuntu"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:paddingStart="4dp"
         android:paddingEnd="4dp"
         android:textColor="@color/ada_blue"
