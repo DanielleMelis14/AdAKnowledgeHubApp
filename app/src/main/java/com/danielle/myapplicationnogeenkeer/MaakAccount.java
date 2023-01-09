@@ -53,6 +53,14 @@ public class MaakAccount extends AppCompatActivity {
                     JSONObject jsonResponse = new JSONObject(response);
                     System.out.println(jsonResponse);
                     System.out.println(jsonResponse.get("data"));
+                    if (jsonResponse.getBoolean("success") == true){
+                        Intent intent = new Intent(MaakAccount.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else {
+                        Toast.makeText(MaakAccount.super.getBaseContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -75,7 +83,5 @@ public class MaakAccount extends AppCompatActivity {
         };
 
         queue.add(request);
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 }
