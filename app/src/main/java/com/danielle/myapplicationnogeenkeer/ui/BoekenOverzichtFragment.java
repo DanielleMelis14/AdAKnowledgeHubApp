@@ -1,6 +1,5 @@
 package com.danielle.myapplicationnogeenkeer.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -21,7 +18,6 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.danielle.myapplicationnogeenkeer.BookAdapter;
-import com.danielle.myapplicationnogeenkeer.LoginPage;
 import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;
 import com.danielle.myapplicationnogeenkeer.databinding.FragmentBoekenOverzichtBinding;
@@ -32,8 +28,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class BoekenOverzichtFragment extends Fragment {
 
@@ -51,7 +45,7 @@ public class BoekenOverzichtFragment extends Fragment {
         button_terug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.ReplaceFragment(new BronnenFragment());
+                MainActivity.ReplaceFragment(new BronnenOverzichtFragment());
             }
         });
 

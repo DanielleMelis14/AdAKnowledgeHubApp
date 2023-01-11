@@ -38,10 +38,10 @@ public class BookAdapter extends BaseAdapter {
 
         if(view == null){
             final LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
-            view = layoutInflater.inflate(R.layout.cardview, null);
+            view = layoutInflater.inflate(R.layout.cardview_boeken, null);
         }
 
-        TextView tvBookName = view.findViewById(R.id.textview_books);
+        TextView tvBookName = view.findViewById(R.id.textview_book);
         tvBookName.setText(book.getTitel());
 
         ImageView ivBook = view.findViewById(R.id.image_books);
