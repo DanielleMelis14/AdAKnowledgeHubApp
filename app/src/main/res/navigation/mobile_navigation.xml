@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_bronnen"
-        android:name="com.danielle.myapplicationnogeenkeer.ui.BronnenFragment"
+        android:name="com.danielle.myapplicationnogeenkeer.ui.BronnenOverzichtFragment"
         android:label="@string/page_bronnen"
         tools:layout="@layout/fragment_bronnen" />
 
