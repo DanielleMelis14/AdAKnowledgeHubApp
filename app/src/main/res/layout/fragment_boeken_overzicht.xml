@@ -34,17 +34,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_ada" />
 
-    <SearchView
-        android:id="@+id/zoekbalk"
-        android:layout_width="297dp"
-        android:layout_height="41dp"
-        android:iconifiedByDefault="false"
-        android:queryHint="Zoeken"
-        app:layout_constraintBottom_toTopOf="@+id/Gridview_boeken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_boeken" />
-
     <Button
         android:id="@+id/btn_back"
         android:layout_width="30dp"
@@ -67,6 +56,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zoekbalk" />
+        app:layout_constraintTop_toBottomOf="@+id/title_boeken"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
