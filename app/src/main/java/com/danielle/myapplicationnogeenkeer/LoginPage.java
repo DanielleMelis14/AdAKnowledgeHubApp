@@ -14,6 +14,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.danielle.myapplicationnogeenkeer.models.Student;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,11 +56,14 @@ public class LoginPage extends AppCompatActivity {
 
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
-                    System.out.println(jsonResponse);
-                    System.out.println(jsonResponse.get("data"));
 
-                    if (jsonResponse.getBoolean("success") == true){
+                    if (jsonResponse.getBoolean("success")){
+                        JSONObject data = jsonResponse.getJSONObject("data");
+
                         Intent intent = new Intent(LoginPage.this, MainActivity.class);
+                        intent.putExtra("student_id", data.getInt("Student_id"));
+                        intent.putExtra("naam", data.getString("Naam"));
+                        intent.putExtra("email", data.getString("Email"));
                         startActivity(intent);
                         finish();
                     }

@@ -3,6 +3,7 @@ package com.danielle.myapplicationnogeenkeer;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.danielle.myapplicationnogeenkeer.models.Student;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +20,16 @@ import com.danielle.myapplicationnogeenkeer.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private static FragmentManager fm;
     private ActivityMainBinding binding;
+    private static Student student;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.fm = this.getSupportFragmentManager();
+
+        Bundle extras = getIntent().getExtras();
+        student = new Student(extras.getInt("student_id"), extras.getString("naam"), extras.getString("email"));
+        System.out.println(student.getId());
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -41,5 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static void PreviousFragment() {
         fm.popBackStackImmediate();
+    }
+
+    public static Student getLoggedInStudent() {
+        return student;
     }
 }

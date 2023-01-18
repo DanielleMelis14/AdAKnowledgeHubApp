@@ -1,5 +1,6 @@
 package com.danielle.myapplicationnogeenkeer.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.danielle.myapplicationnogeenkeer.Inleveren;
 import com.danielle.myapplicationnogeenkeer.Lenen;
 import com.danielle.myapplicationnogeenkeer.MainActivity;
 import com.danielle.myapplicationnogeenkeer.R;
@@ -33,13 +35,16 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 //Jeremy
 //                MainActivity.ReplaceFragment(new Lenen());
+                Intent intent = new Intent(getContext(), Lenen.class);
+                startActivity(intent);
             }
         });
 
         button_inleveren.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.ReplaceFragment(new InleverenFragment());
+                Intent intent = new Intent(getContext(), Inleveren.class);
+                startActivity(intent);
             }
         });
 

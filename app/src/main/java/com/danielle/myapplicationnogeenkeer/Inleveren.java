@@ -1,7 +1,5 @@
 package com.danielle.myapplicationnogeenkeer;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
@@ -17,6 +15,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
@@ -31,7 +31,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Lenen extends AppCompatActivity {
+public class Inleveren extends AppCompatActivity {
     //Intialize attributes
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
@@ -40,9 +40,9 @@ public class Lenen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_lenen);
+        setContentView(R.layout.fragment_inleveren);
 
-        Button button_terug = this.findViewById(R.id.btn_back5);
+        Button button_terug = this.findViewById(R.id.btn_back4);
 
         button_terug.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,7 +132,7 @@ public class Lenen extends AppCompatActivity {
     }
 
     private void loan(String id) {
-        String url = "https://projects.adainforma.tk/adaknowledgehub/api/v1/loan/create/";
+        String url = "https://projects.adainforma.tk/adaknowledgehub/api/v1/loan/return/";
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -140,13 +140,14 @@ public class Lenen extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Log.i("Response", response);
+                Log.i("Response", "dqwqwd");
 
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     if(jsonResponse.getBoolean("success"))
-                        Toast.makeText(Lenen.this, "Lening toegevoegd", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Inleveren.this, "Lening ingeleverd", Toast.LENGTH_SHORT).show();
                     else
-                        Toast.makeText(Lenen.this, "Er is iets misgegaan met het toevoegen van de lening", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Inleveren.this, "Er is iets misgegaan met het inleveren van de lening", Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -155,7 +156,7 @@ public class Lenen extends AppCompatActivity {
         }, error -> {
             // method to handle errors.
             Toast.makeText(this, "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
-            Log.e("erorr", error.getMessage());
+            Log.e("error", error.getMessage());
         }) {
             @Override
             protected Map<String, String> getParams() {
@@ -167,18 +168,8 @@ public class Lenen extends AppCompatActivity {
                 String currentDateandTime = sdf.format(new Date());
 
                 params.put("Student_id", String.valueOf(student.getId()));
-                params.put("LeenDatum", currentDateandTime);
-
-                if(id.substring(0, 1).matches("[a-zA-Z]")){
-                    params.put("Overige_attributen_ID", id);
-                    System.out.println("overig attribuut");
-                } else {
-                    params.put("Boek_id", id);
-                    System.out.println("boek");
-                }
-
-                System.out.println(id.matches("[a-zA-Z]+"));
-                System.out.println(id);
+                params.put("item_id", id);
+                params.put("InleverDatum", currentDateandTime);
 
                 return params;
             }
