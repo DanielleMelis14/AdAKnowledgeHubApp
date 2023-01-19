@@ -145,7 +145,7 @@ public class Inleveren extends AppCompatActivity {
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     if(jsonResponse.getBoolean("success"))
-                        Toast.makeText(Inleveren.this, "Lening ingeleverd", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Inleveren.this, "Object ingeleverd", Toast.LENGTH_SHORT).show();
                     else
                         Toast.makeText(Inleveren.this, "Er is iets misgegaan met het inleveren van de lening", Toast.LENGTH_SHORT).show();
 

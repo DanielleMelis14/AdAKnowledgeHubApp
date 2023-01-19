@@ -300,7 +300,7 @@
         android:height="65dp"
         android:backgroundTint="@color/ada_blue"
         android:onClick="Login"
-        android:text="@string/maak_account"
+        android:text="Registreer boek"
         android:textAlignment="viewStart"
         android:textStyle="bold"
         android:viewportWidth="241"
