@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application Nog een keer</string>
+    <string name="app_name">AdA knowledge Hub</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -64,6 +64,5 @@
     <string name="title_persoonlijke_gegevens">Persoonlijke gegevens</string>
 
     <string name="title_online_bronnen">Online bronnen</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

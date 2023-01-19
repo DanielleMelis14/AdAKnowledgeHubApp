@@ -15,7 +15,7 @@ import com.danielle.myapplicationnogeenkeer.databinding.FragmentBronnenBinding;
 
 public class BronnenOverzichtFragment extends Fragment {
 
-    private FragmentBronnenBinding binding;
+    private FragmentBronnenOverzichtBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
