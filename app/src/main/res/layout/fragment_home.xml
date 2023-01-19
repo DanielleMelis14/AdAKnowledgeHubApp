@@ -87,4 +87,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_online_bronnen" />
+
+    <Button
+        android:id="@+id/button_registreer_boek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:width="241dp"
+        android:height="65dp"
+        android:backgroundTint="@color/ada_blue"
+        android:text="@string/title_boek_registreren"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        android:viewportWidth="241"
+        android:viewportHeight="65"
+        app:cornerRadius="20px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_opgeslagen" />
 </androidx.constraintlayout.widget.ConstraintLayout>

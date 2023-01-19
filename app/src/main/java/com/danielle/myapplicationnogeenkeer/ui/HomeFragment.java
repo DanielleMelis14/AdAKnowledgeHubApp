@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.danielle.myapplicationnogeenkeer.BoekRegistreren;
 import com.danielle.myapplicationnogeenkeer.Inleveren;
 import com.danielle.myapplicationnogeenkeer.Lenen;
 import com.danielle.myapplicationnogeenkeer.MainActivity;
@@ -29,6 +30,7 @@ public class HomeFragment extends Fragment {
         Button button_lenen = root.findViewById(R.id.button_boeken);
         Button button_inleveren = root.findViewById(R.id.button_online_bronnen);
         Button button_huidigeleningen = root.findViewById(R.id.button_opgeslagen);
+        Button button_boekregistreren = root.findViewById(R.id.button_registreer_boek);
 
         button_lenen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 MainActivity.ReplaceFragment(new HuidigeLeningenFragment());
+            }
+        });
+
+        button_boekregistreren.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), BoekRegistreren.class);
+                startActivity(intent);
             }
         });
         return root;

@@ -17,6 +17,13 @@
         android:theme="@style/Theme.MyApplicationNogEenKeer"
         tools:targetApi="31">
         <activity
+            android:name=".BoekRegistreren"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Lenen"
             android:exported="false" />
         <activity
@@ -24,10 +31,10 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MaakAccount"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LoginPage"
             android:exported="true"

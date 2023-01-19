@@ -50,6 +50,15 @@
     <string name="boek_titel">Titel van boek</string>
     <string name="leen_dagen">Nog ... dagen</string>
 
+    <string name="title_boek_registreren">Boek registreren</string>
+    <string name="boek_isbn">ISBN</string>
+    <string name="boek_schrijver">Schrijver</string>
+    <string name="boek_samenvatting">Samenvatting</string>
+    <string name="boek_taal">Taal</string>
+    <string name="boek_druk">Druk</string>
+    <string name="boek_jaar">Jaar</string>
+    <string name="boek_foto">Foto</string>
+
     <string name="zoeken">Zoeken</string>
 
     <string name="title_persoonlijke_gegevens">Persoonlijke gegevens</string>
